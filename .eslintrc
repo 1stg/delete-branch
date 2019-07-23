@@ -1,3 +1,19 @@
 {
-  "extends": "1stg"
+  "extends": "1stg",
+  "plugins": ["graphql"],
+  "rules": {
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "@typescript-eslint/no-parameter-properties": 0,
+    "graphql/named-operations": [2, { "env": "literal" }],
+    "graphql/template-strings": [2, { "env": "literal" }],
+    "no-useless-constructor": 0
+  },
+  "overrides": [
+    {
+      "files": [".*rc.js", "*.config.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": 0
+      }
+    }
+  ]
 }
