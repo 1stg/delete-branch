@@ -10532,4 +10532,11 @@ export enum UserStatusOrderField {
 export type GetBranchesQueryVariables = {};
 
 
-export type GetBranchesQuery = ({ __typename?: 'Query' } & { viewer: ({ __typename?: 'User' } & Pick<User, 'name'> & { repositories: ({ __typename?: 'RepositoryConnection' } & { nodes: Maybe<Array<Maybe<({ __typename?: 'Repository' } & Pick<Repository, 'name' | 'description'> & { refs: Maybe<({ __typename?: 'RefConnection' } & { nodes: Maybe<Array<Maybe<({ __typename?: 'Ref' } & Pick<Ref, 'name'>)>>> })>, branchProtectionRules: ({ __typename?: 'BranchProtectionRuleConnection' } & { nodes: Maybe<Array<Maybe<({ __typename?: 'BranchProtectionRule' } & Pick<BranchProtectionRule, 'pattern'>)>>> }) })>>> }) }) });
+export type GetBranchesQuery = ({ __typename?: 'Query' } & { viewer: ({ __typename?: 'User' } & Pick<User, 'name'> & { repositories: ({ __typename?: 'RepositoryConnection' } & { nodes: Maybe<Array<Maybe<({ __typename?: 'Repository' } & Pick<Repository, 'name' | 'description'> & { refs: Maybe<({ __typename?: 'RefConnection' } & { nodes: Maybe<Array<Maybe<({ __typename?: 'Ref' } & Pick<Ref, 'id' | 'name'>)>>> })>, branchProtectionRules: ({ __typename?: 'BranchProtectionRuleConnection' } & { nodes: Maybe<Array<Maybe<({ __typename?: 'BranchProtectionRule' } & Pick<BranchProtectionRule, 'pattern'>)>>> }) })>>> }) }) });
+
+export type DeleteBranchesMutationVariables = {
+  input: DeleteRefInput
+};
+
+
+export type DeleteBranchesMutation = ({ __typename?: 'Mutation' } & { deleteRef: Maybe<({ __typename?: 'DeleteRefPayload' } & Pick<DeleteRefPayload, 'clientMutationId'>)> });

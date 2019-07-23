@@ -2,10 +2,20 @@
   "extends": "1stg",
   "plugins": ["graphql"],
   "rules": {
+    "@typescript-eslint/explicit-member-accessibility": [
+      2,
+      {
+        "accessibility": "no-public",
+        "overrides": {
+          "parameterProperties": "off"
+        }
+      }
+    ],
     "@typescript-eslint/no-non-null-assertion": 0,
     "@typescript-eslint/no-parameter-properties": 0,
     "graphql/named-operations": [2, { "env": "literal" }],
     "graphql/template-strings": [2, { "env": "literal" }],
+    "import/no-named-as-default": 0,
     "no-useless-constructor": 0
   },
   "overrides": [

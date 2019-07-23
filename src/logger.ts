@@ -5,7 +5,7 @@ export const pkg = require('../package.json')
 
 export const logger = new Signale({
   scope: pkg.name,
-  logLevel: 'warn',
+  logLevel: process.env.NODE_ENV === 'development' ? 'info' : 'warn',
 })
 
 export const info = signale.scope(pkg.name).info

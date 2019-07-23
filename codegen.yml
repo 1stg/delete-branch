@@ -6,6 +6,3 @@ generates:
     plugins:
       - 'typescript'
       - 'typescript-operations'
-  src/queries.d.ts:
-    plugins:
-      - 'typescript-graphql-files-modules'

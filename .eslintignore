@@ -1,4 +1,3 @@
 dist
 node_modules
 src/schema.d.ts
-src/queries.d.ts
