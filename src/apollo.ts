@@ -1,10 +1,11 @@
-import ApolloClient, { gql } from 'apollo-boost'
+import ApolloClient from 'apollo-boost'
 import { GraphQLError } from 'graphql'
 import fetch from 'node-fetch'
 
-import { GetBranchesQuery } from './schema'
+import { GetBranchesQuery, DeleteBranchesMutation } from './schema'
 import { logger } from './logger'
 import { batch } from './util'
+import { getBranches, deleteBranches } from './queries.gql'
 
 import micromatch from 'micromatch'
 
@@ -35,30 +36,7 @@ export class ApolloClientApi {
 
   async getBranches(patterns?: string | string[]) {
     const { data, errors } = await this.client.query<GetBranchesQuery>({
-      query: gql`
-        query getBranches {
-          viewer {
-            name
-            repositories(first: 100) {
-              nodes {
-                name
-                description
-                refs(first: 100, refPrefix: "refs/heads/") {
-                  nodes {
-                    id
-                    name
-                  }
-                }
-                branchProtectionRules(first: 100) {
-                  nodes {
-                    pattern
-                  }
-                }
-              }
-            }
-          }
-        }
-      `,
+      query: getBranches,
     })
 
     if (errors) {
@@ -120,6 +98,10 @@ export class ApolloClientApi {
   }
 
   async deleteBranches(branches: Branch[]) {
+    if (!branches.length) {
+      return []
+    }
+
     logger.warn(
       'The following branches will be deleted: ',
       branches.map(
@@ -130,14 +112,8 @@ export class ApolloClientApi {
     const clientMutationIds = await batch(
       branches.map(branch =>
         this.client
-          .mutate<{ clientMutationId: string }>({
-            mutation: gql`
-              mutation deleteBranches($input: DeleteRefInput!) {
-                deleteRef(input: $input) {
-                  clientMutationId
-                }
-              }
-            `,
+          .mutate<DeleteBranchesMutation>({
+            mutation: deleteBranches,
             variables: {
               input: {
                 refId: branch.id,
@@ -149,7 +125,7 @@ export class ApolloClientApi {
               throw new FlatGraphQLError(errors)
             }
 
-            return data!.clientMutationId
+            return data!.deleteRef!.clientMutationId!
           }),
       ),
     )

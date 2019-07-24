@@ -1,6 +1,6 @@
 overwrite: true
 schema: './node_modules/@octokit/graphql-schema/schema.graphql'
-documents: 'src/**/*.gql'
+documents: 'src/**/*.gql.ts'
 generates:
   src/schema.d.ts:
     plugins:
