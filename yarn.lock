@@ -2216,21 +2216,21 @@ escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-1stg@^5.3.1:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-1stg/-/eslint-config-1stg-5.3.1.tgz#932c4f4b2a20a77a1d8179200f7077118435f22a"
-  integrity sha512-Vd8Vj6M81o0RqXEhiPFwUHCk/mRTOnQB5hR35J/f7XXha2PY3O7pYHIxYZbarY072dgLYSai0vpyLrIzPLBfcA==
+eslint-config-1stg@^5.4.1:
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-1stg/-/eslint-config-1stg-5.4.1.tgz#80b94b9dc4fead2fe88f3ee413ee976cf3485512"
+  integrity sha512-gvY10CZdg9/G7XCuSpVjylVIePzubUcmpV6zKKl90zQfFmFwl3hexXb13g2wAzCCluYVwWDjTMfcbAo4+PGiIg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^1.13.0"
     "@typescript-eslint/parser" "^1.13.0"
     eslint-config-prettier "^6.0.0"
     eslint-config-standard "^13.0.1"
-    eslint-import-resolver-typescript JounQin/node_modules#eslint-import-resolver-typescript
+    eslint-import-resolver-typescript JounQin/eslint-import-resolver-typescript#feat/resolve_dts
     eslint-plugin-import "^2.18.2"
     eslint-plugin-node "^9.1.0"
     eslint-plugin-prettier "^3.1.0"
     eslint-plugin-promise "^4.2.1"
-    eslint-plugin-react "^7.14.2"
+    eslint-plugin-react "^7.14.3"
     eslint-plugin-standard "^4.0.0"
     eslint-plugin-vue "^5.2.3"
     prettier-config-1stg "^0.1.0"
@@ -2255,9 +2255,9 @@ eslint-import-resolver-node@^0.3.2:
     debug "^2.6.9"
     resolve "^1.5.0"
 
-"eslint-import-resolver-typescript@github:JounQin/node_modules#eslint-import-resolver-typescript":
+"eslint-import-resolver-typescript@github:JounQin/eslint-import-resolver-typescript#feat/resolve_dts":
   version "1.1.1"
-  resolved "https://codeload.github.com/JounQin/node_modules/tar.gz/c97af25a471e639adbc66dc8420cf5322bc8b1c3"
+  resolved "https://codeload.github.com/JounQin/eslint-import-resolver-typescript/tar.gz/4f9c6dc691fed2a2073b5cbb52b6afd924b921d4"
   dependencies:
     debug "^4.0.1"
     resolve "^1.4.0"
@@ -2328,7 +2328,7 @@ eslint-plugin-promise@^4.2.1:
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-4.2.1.tgz#845fd8b2260ad8f82564c1222fce44ad71d9418a"
   integrity sha512-VoM09vT7bfA7D+upt+FjeBO5eHIJQBUWki1aPvB+vbNiHS3+oGIJGIeyBtKQTME6UPXXy3vV07OL1tHd3ANuDw==
 
-eslint-plugin-react@^7.14.2:
+eslint-plugin-react@^7.14.3:
   version "7.14.3"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.14.3.tgz#911030dd7e98ba49e1b2208599571846a66bdf13"
   integrity sha512-EzdyyBWC4Uz2hPYBiEJrKCUi2Fn+BJ9B/pJQcjw5X+x/H2Nm59S4MJIvL4O5NEE0+WbnQwEBxWY03oUk+Bc3FA==
