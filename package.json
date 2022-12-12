@@ -33,7 +33,7 @@
     "@graphql-codegen/cli": "^1.4.0",
     "@graphql-codegen/typescript": "1.4.0",
     "@graphql-codegen/typescript-operations": "1.4.0",
-    "@octokit/graphql-schema": "^6.24.0",
+    "@octokit/graphql-schema": "^6.70.1",
     "@types/graphql": "^14.2.3",
     "@types/jest": "^24.0.15",
     "@types/micromatch": "^3.1.0",
