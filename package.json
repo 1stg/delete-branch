@@ -19,10 +19,10 @@
     "dist"
   ],
   "dependencies": {
-    "apollo-boost": "^0.4.3",
+    "apollo-boost": "^0.4.9",
     "commander": "^2.20.0",
     "graphql": "^14.4.2",
-    "graphql-tag": "^2.10.1",
+    "graphql-tag": "^2.12.6",
     "micromatch": "^4.0.2",
     "node-fetch": "^2.6.0",
     "signale": "^1.4.0",
