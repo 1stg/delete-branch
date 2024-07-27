@@ -29,7 +29,7 @@
     "tslib": "^1.10.0"
   },
   "devDependencies": {
-    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/config-conventional": "^8.3.6",
     "@graphql-codegen/cli": "^1.4.0",
     "@graphql-codegen/typescript": "1.4.0",
     "@graphql-codegen/typescript-operations": "1.4.0",
@@ -40,7 +40,7 @@
     "@types/node": "^12.6.8",
     "@types/node-fetch": "^2.5.0",
     "@types/signale": "^1.2.1",
-    "commitlint": "^8.1.0",
+    "commitlint": "^8.3.6",
     "concurrently": "^4.1.1",
     "env-cmd": "^9.0.3",
     "eslint": "^6.1.0",
