@@ -37,7 +37,7 @@
     "@types/graphql": "^14.2.3",
     "@types/jest": "^24.0.15",
     "@types/micromatch": "^3.1.1",
-    "@types/node": "^12.6.8",
+    "@types/node": "^12.20.55",
     "@types/node-fetch": "^2.5.0",
     "@types/signale": "^1.2.1",
     "commitlint": "^8.1.0",
